@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  const Home({ Key key }) : super(key: key);
+  const Home({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: Theme.of(context).textTheme.headline1.fontSize,
+                fontSize: Theme.of(context).textTheme.headline1!.fontSize,
                 )
               ),
           )
