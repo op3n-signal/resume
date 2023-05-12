@@ -29,10 +29,6 @@ class Home extends StatelessWidget {
             child: Text(
               'Antonio Martinez \n\nFull-stack developer', 
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: Theme.of(context).textTheme.headline1!.fontSize,
-                )
               ),
           )
       ],)
