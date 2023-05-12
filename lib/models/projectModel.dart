@@ -4,8 +4,8 @@ enum ProjectType {
 }
 
 class ProjectModel {
-  final String title;
-  final ProjectType type;
+  final String? title;
+  final ProjectType? type;
 
   ProjectModel({this.title, this.type});
 }
