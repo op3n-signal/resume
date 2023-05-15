@@ -1,30 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:portfolio/controllers/home_controller.dart';
-import 'package:portfolio/screens/home.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:portfolio/controllers/auth_controller.dart';
+import 'package:portfolio/controllers/settings_controller.dart';
+import 'package:portfolio/routes.dart';
+import 'package:portfolio/screens/about_screen.dart';
+import 'package:portfolio/screens/home_screen.dart';
+import 'package:portfolio/widget/navigation.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
+
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+    
   @override
-  Widget build(BuildContext context) => GetMaterialApp(
-      onInit: () {
-        Get
-          ..put(HomeController(), permanent: true);
-      },
-      home: const Home(),
-      initialRoute: '/',
-      theme: ThemeData(
-        textTheme: TextTheme(
-          displayLarge: TextStyle(fontSize: 26,)
+  Widget build(BuildContext context) => GetBuilder<SettingsController>(
+        id: 'settings',
+        init: SettingsController(),
+        initState: (_) {
+          Get
+            ..put(AuthController(), permanent: true);
+        },
+        builder: (controller) => GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Portfolio',
+          home: const HomeScreen(),
+          getPages: Routes.getPages(),
         ),
-        appBarTheme: AppBarTheme(
-          color: Colors.teal
-        )
-      ),
-      title: 'Portfolio'
-    );
+      );
 }
