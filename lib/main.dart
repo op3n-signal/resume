@@ -15,11 +15,6 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  
-
-/*   Widget? _getPage(BuildContext context, int index) {
-    Get.to((context) => HomeScreen());
-  } */
     
   @override
   Widget build(BuildContext context) => GetBuilder<SettingsController>(
@@ -34,13 +29,6 @@ class MyApp extends StatelessWidget {
           title: 'Portfolio',
           home: const HomeScreen(),
           getPages: Routes.getPages(),
-/*           builder: (context, widget) {
-            //build navigation here
-            return Scaffold(
-              body: _getPage(context, controller.currentIndex),
-              bottomNavigationBar: getNavigation(),
-            );
-          }, */
         ),
       );
 }
