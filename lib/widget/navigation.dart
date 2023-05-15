@@ -5,8 +5,9 @@ import 'package:portfolio/controllers/settings_controller.dart';
 import 'package:portfolio/routes.dart';
 
 void _getPage(int index) {
+  if(Get.currentRoute != Routes.pages[index])
     Get
-      ..back()
+      ..back(closeOverlays: true)
       ..toNamed(Routes.pages[index]);
   }
 

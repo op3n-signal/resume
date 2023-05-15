@@ -10,7 +10,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('About'),
+      body: Center(child: Text('About')),
       bottomNavigationBar: getNavigation(),
       );
   }

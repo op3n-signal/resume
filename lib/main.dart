@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
           title: 'Portfolio',
           home: const HomeScreen(),
           getPages: Routes.getPages(),
-          initialRoute: Routes.pages[0],
 /*           builder: (context, widget) {
             //build navigation here
             return Scaffold(
