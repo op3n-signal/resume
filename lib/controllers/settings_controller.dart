@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 class SettingsController extends GetxController {
   static SettingsController get at => Get.find();
 
+  var currentIndex = 0;
+
   ColorScheme scheme = ColorScheme(
     brightness: Brightness.light, 
     primary: Colors.teal, 
@@ -17,4 +19,8 @@ class SettingsController extends GetxController {
     surface: Colors.teal, 
     onSurface: Colors.white
     );
+
+  void setPage(int index) {
+    currentIndex = index;
+  }
 }
