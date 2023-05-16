@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
-import 'package:portfolio/screens/style_data.dart';
+import 'package:portfolio/screens/styles/style_data.dart';
 import 'package:portfolio/widget/navigation.dart';
+import 'package:portfolio/widget/projects.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Column(
             children: [
@@ -38,16 +39,20 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 20,),
           Container(
             alignment: Alignment.center,
-            width: MediaQuery.of(context).size.width * 0.4,
+            height: MediaQuery.of(context).size.width * 0.2,
+            width: MediaQuery.of(context).size.width * 0.5,
             child: ListView(
               shrinkWrap: true,
               children: [
-                Center(child: Text('Full Stack Dev')),
-                Center(child: Text('')),
+                Center(child: Text('Full Stack Dev', style: TextStyle(fontSize: Styles.Regular),)),
+                SizedBox(height: 10,),
+                Center(child: Text('1+ year experience')),
               ],
             ),
-          )
-        ]),
+          ),
+          Projects()
+        ],
+      ),
       bottomNavigationBar: getNavigation(),
       );
   }
