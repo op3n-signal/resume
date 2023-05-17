@@ -6,8 +6,10 @@ class ProjectsController extends GetxController {
   static ProjectsController get at => Get.find();
 
   List<Widget> projects = [
-    Project('Web API'),
+    Project('Web API', 'api.png'),
     SizedBox(width: 10,),
-    Project('Text-To-Speech')
+    Project('Text-To-Speech', 'tts.png'),
+    SizedBox(width: 10,),
+    Project('Text-To-Speech', 'tts.png')
   ];
 }

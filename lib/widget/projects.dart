@@ -11,6 +11,7 @@ class Projects extends StatelessWidget {
     init: ProjectsController(),
     id: 'projects',
     builder: (controller) => Container(
+      color: Colors.blue.shade100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: ProjectsController.at.projects, 
