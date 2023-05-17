@@ -38,7 +38,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20,),
           Container(
             alignment: Alignment.center,
             height: MediaQuery.of(context).size.width * 0.4,
@@ -46,9 +45,11 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(child: Text('Full Stack Dev', style: TextStyle(fontSize: Styles.Regular),)),
+                Center(child: Text('Full Stack Dev', style: TextStyle(fontSize: Styles.Heading),)),
                 SizedBox(height: 10,),
-                Center(child: Text('1+ year experience')),
+                Center(child: Text('w/ 1+ year experience')),
+                SizedBox(height: 10,),
+                Center(child: Text('C# | Angular | Flutter', style: TextStyle(fontSize: Styles.Regular),)),
               ],
             ),
           ),

@@ -20,8 +20,8 @@ class Project extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
                   'assets/images/$image', 
-                  width: 150, 
-                  height: 120, 
+                  width: Styles.ProjectWidth, 
+                  height: Styles.ProjectHeight, 
                   fit: BoxFit.cover,
                 )
               ),
