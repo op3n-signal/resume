@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class SettingsController extends GetxController {
   static SettingsController get at => Get.find();
 
-  var currentIndex = 0;
+  int currentIndex = 0;
 
   ColorScheme scheme = ColorScheme(
     brightness: Brightness.light, 

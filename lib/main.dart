@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:portfolio/controllers/auth_controller.dart';
-import 'package:portfolio/controllers/projects_controller.dart';
 import 'package:portfolio/controllers/settings_controller.dart';
 import 'package:portfolio/routes.dart';
-import 'package:portfolio/screens/about_screen.dart';
 import 'package:portfolio/screens/home_screen.dart';
-import 'package:portfolio/widget/navigation.dart';
 
 void main() async {
   await GetStorage.init();

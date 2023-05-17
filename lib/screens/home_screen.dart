@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
+import 'package:portfolio/controllers/settings_controller.dart';
 import 'package:portfolio/screens/styles/style_data.dart';
+import 'package:portfolio/widget/appbar.dart';
 import 'package:portfolio/widget/navigation.dart';
 import 'package:portfolio/widget/projects.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  static final title = 'Home';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar(title),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
