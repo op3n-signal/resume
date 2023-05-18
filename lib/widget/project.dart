@@ -25,16 +25,23 @@ class Project extends StatelessWidget {
                   fit: BoxFit.cover,
                 )
               ),
-              Container(
-                color: Color.fromRGBO(220, 250, 250, 1),
-                width: 150,
-                alignment: Alignment.topCenter,
-                child: Text(
-                  title, 
-                  style: TextStyle(
-                    fontSize: Styles.Regular2,   
-                  ),
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(4),
                 ),
+                child: Container(
+                  color: Color.fromRGBO(222, 228, 228, 1),
+                  padding: EdgeInsets.all(4),
+                  width: 150,
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    title, 
+                    style: TextStyle(
+                      fontSize: Styles.Regular2,   
+                    ),
+                  ),
+                )
               )
           ],
         )

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
-import 'package:portfolio/controllers/settings_controller.dart';
+import 'package:portfolio/custom_icons_icons.dart';
 import 'package:portfolio/screens/styles/style_data.dart';
 import 'package:portfolio/widget/appbar.dart';
 import 'package:portfolio/widget/navigation.dart';
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: appBar(title),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
             child: Column(
@@ -54,7 +54,20 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 10,),
                 Center(child: Text('w/ 1+ year experience')),
                 SizedBox(height: 10,),
-                Center(child: Text('C# | Angular | Flutter', style: TextStyle(fontSize: Styles.Regular),)),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(CustomIcons.angular, color: Colors.red),
+                      SizedBox(width: 5,),
+                      Icon(CustomIcons.js_square, color: Color.fromARGB(255, 212, 192, 11)),
+                      SizedBox(width: 5,),
+                      Icon(CustomIcons.css3_alt, color: Colors.red),
+                      SizedBox(width: 5,),
+                      Icon(Icons.flutter_dash, color: Colors.blue),
+                    ],
+                  )
+                ),
               ],
             ),
           ),

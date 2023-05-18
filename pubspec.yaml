@@ -53,7 +53,6 @@ flutter:
     - assets/images/unname.jpg
     - assets/images/api.png
     - assets/images/tts.png
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -66,7 +65,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  #fonts:
+  fonts:
+    - family:  CustomIcons
+      fonts:
+        - asset: assets/fonts/CustomIcons.ttf
 
   #
   # For details regarding fonts from package dependencies,
