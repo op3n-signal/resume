@@ -10,7 +10,7 @@ class Styles {
   static const Color SubColor = Color.fromARGB(255, 86, 129, 170);
 
   //Projects
-  static const double ProjectScrollHeight = 140;
-  static const double ProjectHeight = 120;
-  static const double ProjectWidth = 150;
+  static const double ProjectScrollHeight = 170;
+  static const double ProjectHeight = 0.17;
+  static const double ProjectWidth = 0.4;
 }

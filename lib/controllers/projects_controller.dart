@@ -10,6 +10,6 @@ class ProjectsController extends GetxController {
     SizedBox(width: 10,),
     Project('Text-To-Speech', 'tts.png'),
     SizedBox(width: 10,),
-    Project('Text-To-Speech', 'tts.png')
+    Project('Budget', 'Recipe_logo.jpeg')
   ];
 }

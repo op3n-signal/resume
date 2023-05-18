@@ -11,7 +11,7 @@ class Projects extends StatelessWidget {
   Widget build(BuildContext context) => GetBuilder<ProjectsController>(
     init: ProjectsController(),
     id: 'projects',
-    builder: (controller) => shadowContainer(
+    builder: (controller) => 
       Container(
         height: Styles.ProjectScrollHeight,
         child: ListView(
@@ -19,6 +19,6 @@ class Projects extends StatelessWidget {
           children: ProjectsController.at.projects, 
         ),
       )
-    )
-  );
+    );
+  
 }

@@ -53,6 +53,7 @@ flutter:
     - assets/images/unname.jpg
     - assets/images/api.png
     - assets/images/tts.png
+    - assets/images/Recipe_logo.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: appBar(title),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
             child: Column(
@@ -25,14 +25,13 @@ class HomeScreen extends StatelessWidget {
                     child: Text('Antonio Martinez', 
                       style: TextStyle(
                         fontFamily: 'Trajan Pro',
-                        letterSpacing: 1,
-                        fontSize: Styles.Heading
+                        fontSize: Styles.Heading,
                         )
                     ),
                   ),
                 SizedBox(height: 20,),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.4,
+                  width: MediaQuery.of(context).size.width * 0.5,
                   child: RubberBand( 
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
@@ -51,19 +50,21 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(child: Text('Full Stack Dev', style: TextStyle(fontSize: Styles.Heading),)),
-                SizedBox(height: 10,),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
                 Center(child: Text('w/ 1+ year experience')),
-                SizedBox(height: 10,),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
                 Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      Text('C#', style: TextStyle(color: Color.fromARGB(255, 13, 88, 150), fontWeight: FontWeight.bold),),
+                      SizedBox(width: MediaQuery.of(context).size.width * 0.03,),
                       Icon(CustomIcons.angular, color: Colors.red),
-                      SizedBox(width: 5,),
+                      SizedBox(width: MediaQuery.of(context).size.width * 0.03,),
                       Icon(CustomIcons.js_square, color: Color.fromARGB(255, 212, 192, 11)),
-                      SizedBox(width: 5,),
-                      Icon(CustomIcons.css3_alt, color: Colors.red),
-                      SizedBox(width: 5,),
+                      SizedBox(width: MediaQuery.of(context).size.width * 0.03,),
+                      Icon(CustomIcons.css3_alt, color: Colors.blueAccent,),
+                      SizedBox(width: MediaQuery.of(context).size.width * 0.03,),
                       Icon(Icons.flutter_dash, color: Colors.blue),
                     ],
                   )

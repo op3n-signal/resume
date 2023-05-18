@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/styles/style_data.dart';
+import 'package:portfolio/widget/shadow_container.dart';
 
 class Project extends StatelessWidget {
   const Project(this.title, this.image, {Key? key}) : super(key: key);
@@ -12,19 +13,23 @@ class Project extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(10),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Stack(
             alignment: Alignment.topCenter,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.asset(
-                  'assets/images/$image', 
-                  width: Styles.ProjectWidth, 
-                  height: Styles.ProjectHeight, 
-                  fit: BoxFit.cover,
-                )
+              shadowContainer(
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    'assets/images/$image', 
+                    width: MediaQuery.of(context).size.width * Styles.ProjectWidth, 
+                    height: MediaQuery.of(context).size.height * Styles.ProjectHeight, 
+                    fit: BoxFit.cover,
+                  )
+                ),
               ),
+              
               ClipRRect(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(4),
@@ -33,7 +38,7 @@ class Project extends StatelessWidget {
                 child: Container(
                   color: Color.fromRGBO(222, 228, 228, 1),
                   padding: EdgeInsets.all(4),
-                  width: 150,
+                  width: MediaQuery.of(context).size.width * Styles.ProjectWidth,
                   alignment: Alignment.topCenter,
                   child: Text(
                     title, 
