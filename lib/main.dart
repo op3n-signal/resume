@@ -5,6 +5,7 @@ import 'package:portfolio/controllers/auth_controller.dart';
 import 'package:portfolio/controllers/settings_controller.dart';
 import 'package:portfolio/routes.dart';
 import 'package:portfolio/screens/home_screen.dart';
+import 'package:portfolio/screens/styles/style_data.dart';
 
 void main() async {
   await GetStorage.init();
@@ -24,6 +25,11 @@ class MyApp extends StatelessWidget {
         },
         builder: (controller) => GetMaterialApp(
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            textTheme: TextTheme(
+              bodyMedium: TextStyle(fontSize: Styles.Regular, fontFamily: 'RobotoMono')
+            )
+          ),
           title: 'Portfolio',
           home: const HomeScreen(),
           getPages: Routes.getPages(),

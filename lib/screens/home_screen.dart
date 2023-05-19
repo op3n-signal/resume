@@ -20,15 +20,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           Container(
             child: Column(
-              children: [
-                Center(
-                    child: Text('Antonio Martinez', 
-                      style: TextStyle(
-                        fontFamily: 'Trajan Pro',
-                        fontSize: Styles.Heading,
-                        )
-                    ),
-                  ),
+              children: [   
                 SizedBox(height: 20,),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.5,
@@ -44,11 +36,14 @@ class HomeScreen extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            height: MediaQuery.of(context).size.width * 0.4,
-            width: MediaQuery.of(context).size.width * 0.5,
+            height: MediaQuery.of(context).size.width * 0.6,
+            width: MediaQuery.of(context).size.width * 0.6,
+            
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Center(child: Text('Antonio Martinez', style: TextStyle(fontSize: Styles.Regular))),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
                 Center(child: Text('Full Stack Dev', style: TextStyle(fontSize: Styles.Heading),)),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
                 Center(child: Text('w/ 1+ year experience')),
