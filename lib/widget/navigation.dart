@@ -1,7 +1,6 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:portfolio/controllers/settings_controller.dart';
 import 'package:portfolio/routes.dart';
 
 void _getPage(int index) {
